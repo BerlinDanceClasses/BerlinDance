@@ -8,6 +8,7 @@ const courseSchema = new Schema(
     location: String,
     address: String,
     level: String,
+    price: Number,
     timestamps: true
     // date and time
     
