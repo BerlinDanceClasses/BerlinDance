@@ -9,10 +9,9 @@ const courseSchema = new Schema(
     address: String,
     level: String,
     price: Number,
-    timestamps: true
     // date and time
     
   }
 );
 
-module.exports = model('Book', bookSchema);
+module.exports = model('Course', courseSchema);

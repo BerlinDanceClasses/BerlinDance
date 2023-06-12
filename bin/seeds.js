@@ -12,8 +12,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
-        description:
-            "Samba Details",
+        description:"Details",
     },
     {
         name: "Tango",
@@ -22,8 +21,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
-        description:
-            "Samba Details",
+        description:"Details",
     },
     {
         name: "Bachata",
@@ -32,8 +30,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
-        description:
-            "Samba Details",
+        description:"Details",
     },
     {
         name: "Swing",
@@ -142,12 +139,12 @@ mongoose
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
 
-    return DanceCourse.deleteMany({}); //WARNING: this will delete all books in your DB !!
+    return DanceCourse.deleteMany({}); //WARNING: this will delete all courses in your DB !!
   })
   .then( (response) => {
     console.log(response);
 
-    return DanceCourse.insertMany(books);
+    return DanceCourse.insertMany(BerlinDanceCourses);
   })
   .then(coursesFromDB => {
     console.log(`Created ${coursesFromDB.length} Dance Course`);
