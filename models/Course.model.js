@@ -12,7 +12,6 @@ const courseSchema = new Schema(
     timestamps: true
     // date and time
     
-  }
-);
+  });
 
 module.exports = model('Course', courseSchema);
