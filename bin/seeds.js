@@ -12,6 +12,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
+        price: 90,
         description:"Details",
     },
     {

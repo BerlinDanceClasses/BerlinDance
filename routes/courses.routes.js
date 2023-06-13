@@ -58,7 +58,7 @@ router.get("/courses/:courseId/edit", isLoggedIn, async (req, res, next) => {
   try {
     const courseDetails = await DanceCourses.findById(courseId);
 
-    res.render("dance-course/edit-course", { courses: courseDetails });
+    res.render("dance-course/edit-course", { course: courseDetails });
   } catch (e) {
     next(e);
   }

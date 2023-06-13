@@ -2,23 +2,33 @@
 
 <form method="POST" action="/courses/create">
   <label> Name:
-    <input type="text" name="name" />
+    <input type="text" name="name" required/>
   </label>
 
-   <label> Style:
+  <label> Dance Style:
+    <input type="text" name="dancestyle"required />
   </label>
 
   <label> Teacher:
+    <input type="text" name="teacher" required/>
   </label>
 
-  <label> Course Details:
-    <textarea name="details" cols="30" rows="4"> </textarea>
+  <label> Location:
+    <input type="text" name="location"required />
   </label>
 
-   <label> Comment:
+  <label> Address:
+    <input type="text" name="address" required/>
   </label>
 
-  
+  <label> Level:
+    <input type="text" name="level" required/>
+  </label>
 
-  <button type="submit"> Create </button>
+  <label> Price:
+    <input type="number" name="price" required/>
+  </label>
+
+  <button type="submit">Create Course</button>
+  <a href="/courses">Back</a>
 </form>

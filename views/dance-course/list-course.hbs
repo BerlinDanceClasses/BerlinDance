@@ -1,6 +1,5 @@
 <h1>Berlin Dance Courses</h1>
 
-<<<<<<< HEAD
 <a href="/courses/create">Add a new course</a>
 
 <ul>
@@ -8,28 +7,8 @@
     <li>
       <a href="/courses/{{ this.id }}">{{ this.name }}</a> - {{ this.dancestyle }} - {{ this.teacher }}
       <form method="POST" action="/courses/{{ this.id }}/delete">
-        <button type="submit">Delete</button>
+      
       </form>
     </li>
   {{/each}}
 </ul>
-
-=======
-<h1>Courses in our DB:</h1>
-
-{{#each courses}}
-    <section class="course-summary">
-        <h2>{{this.title}}</h2>
-        <p>
-            Teacher: {{this.teacher}} <br />
-            <a href="/courses/{{this._id}}">More details</a>
-            <a href="/courses/{{this._id}}/edit">Edit</a>
-        </p>
-
-        <form method="POST" action="/courses/{{_id}}/delete">
-            <button>Delete</button>
-        </form>
-
-    </section>
-{{/each}}
->>>>>>> e65afee3f29cfec4f51e7aa430732423eaba8e5a

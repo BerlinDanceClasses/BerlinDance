@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-<h1>Edit Course</h1>
+<h1>Edit Course {{title}}</h1>
 
-<form method="POST" action="/courses/{{ course.id }}/edit">
+<form method="POST" action="/courses/{{ course._id }}/edit">
   <label> Name:
-    <input type="text" name="name" value="{{ course.name }}" />
+    <input type="text" name="name" value="{{ course.name }}" required/>
   </label>
 
   <label> Dance Style:
@@ -30,46 +29,6 @@
     <input type="text" name="price" value="{{ course.price }}" />
   </label>
 
-  <label> Details:
-    <textarea name="details" cols="30" rows="4">{{ course.details }}</textarea>
-  </label>
-
-  <button type="submit">Save Changes</button>
-=======
-<h1>Edit course</h1>
-<h2>Edit the course: {{courses.title}}</h2>
-
-<form method="POST" action="/courses/{{courses._id}}/edit">
-    <label> Title:
-        <input type="text" name="title" value="{{courses.title}}" required />
-    </label>
-
- <label> Dancestyle:
-        <textarea name="dancestyle" cols="30" rows="4">{{dancestyle}}</textarea>
-    </label>
-
-    <label> Teacher:
-        <select name="teacher">
-            {{#each teachers}}
-                <option value={{this._id}}>
-                    {{this.name}}
-                </option>
-            {{/each}}
-        </select>
-    </label>
-
-    <label> Location:
-        <input type="text" name="location" min="1" max="10" value="{{courses.location}}" />
-    </label>
-
-     <label> Address:
-        <input type="text" name="address" min="1" max="10" value="{{courses.address}}" />
-    </label>
-
-    <label> Level:
-        <input type="text" name="level" min="1" max="10" value="{{courses.address}}" />
-    </label>
-
-    <button type="submit">Save changes</button>
->>>>>>> e65afee3f29cfec4f51e7aa430732423eaba8e5a
+  <button>Save changes</button>
+  <a href="/courses">Back</a>
 </form>

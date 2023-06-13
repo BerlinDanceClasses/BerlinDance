@@ -1,0 +1,9 @@
+</form>
+<h1>Delete Course</h1>
+
+<p>Are you sure you want to delete "{{ course.name }}"?</p>
+
+<form method="POST" action="/courses/{{ course.id }}/delete">
+  <button type="submit">Yes, delete it</button>
+  <a href="/courses/{{ course.id }}">No, go back</a>
+</form>
