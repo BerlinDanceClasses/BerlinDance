@@ -1,1 +1,37 @@
-<h1>Edit course</h1>
+<h1>Edit Course</h1>
+
+<form method="POST" action="/courses/{{ course.id }}/edit">
+  <label> Name:
+    <input type="text" name="name" value="{{ course.name }}" />
+  </label>
+
+  <label> Dance Style:
+    <input type="text" name="dancestyle" value="{{ course.dancestyle }}" />
+  </label>
+
+  <label> Teacher:
+    <input type="text" name="teacher" value="{{ course.teacher }}" />
+  </label>
+
+  <label> Location:
+    <input type="text" name="location" value="{{ course.location }}" />
+  </label>
+
+  <label> Address:
+    <input type="text" name="address" value="{{ course.address }}" />
+  </label>
+
+  <label> Level:
+    <input type="text" name="level" value="{{ course.level }}" />
+  </label>
+
+  <label> Price:
+    <input type="text" name="price" value="{{ course.price }}" />
+  </label>
+
+  <label> Details:
+    <textarea name="details" cols="30" rows="4">{{ course.details }}</textarea>
+  </label>
+
+  <button type="submit">Save Changes</button>
+</form>
