@@ -2,3 +2,11 @@
 {{#if errorMessage}}
     {{errorMessage}}
 {{/if}}
+
+<h1>Logout</h1>
+
+<p>Are you sure you want to logout?</p>
+
+<form method="POST" action="/auth/logout">
+  <button type="submit">Logout</button>
+</form>
