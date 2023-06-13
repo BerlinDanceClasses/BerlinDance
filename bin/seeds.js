@@ -22,6 +22,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description:"Details",
     },
     {
@@ -31,6 +32,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description:"Details",
     },
     {
@@ -40,6 +42,7 @@ const BerlinDanceCourses = [
         location: "Ballhaus Berlin",
         address: "address",
         level: "Professional",
+        price: 100,
         description:"Details",
     },
     {
@@ -49,6 +52,7 @@ const BerlinDanceCourses = [
         location: "ArtDance Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description:"Details",
     },
     {
@@ -58,6 +62,7 @@ const BerlinDanceCourses = [
         location: "Dolce Vita Dance Studio",
         address: "address",
         level: "Intermediate",
+        price: 100,
         description:"Details",
     },
     {
@@ -67,6 +72,7 @@ const BerlinDanceCourses = [
         location: "Opera House Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description:"Details",
     },
     {
@@ -76,6 +82,7 @@ const BerlinDanceCourses = [
         location: "Beachbar Mitte",
         address: "address",
         level: "Intermediate",
+        price: 100,
         description:"Details",
     },
     {
@@ -85,6 +92,7 @@ const BerlinDanceCourses = [
         location: "Claerchens Ballhaus Berlin",
         address: "address",
         level: "Professionals",
+        price: 100,
         description: "Details",
     },
     {
@@ -94,6 +102,7 @@ const BerlinDanceCourses = [
         location: "Prince Charles Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description: "Details",
     },
     {
@@ -103,6 +112,7 @@ const BerlinDanceCourses = [
         location: "Chantals house of Shame",
         address: "address",
         level: "Open",
+        price: 100,
         description: " Details",
     },
     {
@@ -112,6 +122,7 @@ const BerlinDanceCourses = [
         location: "House of Dance Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description: " Details",
     },
     {
@@ -121,6 +132,7 @@ const BerlinDanceCourses = [
         location: "Kalkscheune",
         address: "address",
         level: "Professionals",
+        price: 100,
         description: " Details",
     },
     {
@@ -130,6 +142,7 @@ const BerlinDanceCourses = [
         location: "Dance School Berlin",
         address: "address",
         level: "Beginners",
+        price: 100,
         description: " Details",
     }
 ];
