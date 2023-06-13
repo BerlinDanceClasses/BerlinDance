@@ -1,1 +1,19 @@
 <h1>Berlin Dance Courses</h1>
+
+<h1>Courses in our DB:</h1>
+
+{{#each courses}}
+    <section class="course-summary">
+        <h2>{{this.title}}</h2>
+        <p>
+            Teacher: {{this.teacher}} <br />
+            <a href="/courses/{{this._id}}">More details</a>
+            <a href="/courses/{{this._id}}/edit">Edit</a>
+        </p>
+
+        <form method="POST" action="/courses/{{_id}}/delete">
+            <button>Delete</button>
+        </form>
+
+    </section>
+{{/each}}
