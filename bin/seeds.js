@@ -10,10 +10,10 @@ const BerlinDanceCourses = [
         dancestyle: "Latin",
         teacher: "Sol de Teneriffe",
         location: "ArtDance Berlin",
-        address: "address",
+        address: "Kattegatstrasse 10, 13359 Berlin",
         level: "Beginners",
         price: 90,
-        description:"Details",
+        description:"",
     },
     {
         name: "Tango",
@@ -23,7 +23,7 @@ const BerlinDanceCourses = [
         address: "address",
         level: "Beginners",
         price: 100,
-        description:"Details",
+        description:"A ballroom dance of Latin American origin in ²/₄ time with a basic pattern of step-step-step-step-close and characterized by long pauses and stylized body positions",
     },
     {
         name: "Bachata",
