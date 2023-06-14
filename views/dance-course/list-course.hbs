@@ -7,13 +7,10 @@
     <li>
       <a href="/courses/{{ this.id }}">{{ this.name }}</a> - {{ this.dancestyle }} - {{ this.teacher }}
       <form method="POST" action="/courses/{{ this.id }}/delete">
-        <button type="submit">Delete</button>
+      
       </form>
     </li>
   {{/each}}
-</ul>
-
-=======
 <h1>Courses in our DB:</h1>
 
 {{#each courses}}
@@ -31,3 +28,4 @@
 
     </section>
 {{/each}}
+</ul>

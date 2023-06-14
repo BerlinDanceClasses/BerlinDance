@@ -9,6 +9,7 @@ const courseSchema = new Schema(
     address: String,
     level: String,
     price: Number,
+    description: String,
     // date and time
     
   });
