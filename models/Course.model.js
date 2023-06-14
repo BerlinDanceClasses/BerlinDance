@@ -10,7 +10,6 @@ const courseSchema = new Schema(
     level: String,
     price: Number,
     description: String,
-    // date and time
     time: {
       type: Date,
       required: true,
