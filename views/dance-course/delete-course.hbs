@@ -2,7 +2,8 @@
 
 <p>Are you sure you want to delete "{{ course.name }}"?</p>
 
-<form method="POST" action="/courses/{{ course._id }}/delete">
-  <button type="submit">Yes, delete it</button>
-  <a href="/courses/{{ course.id }}">No, go back</a>
+<form action="/courses/{{ _id }}/comments" method="POST">
+  <label for="comment">Add a comment:</label>
+  <input type="text" id="comment" name="comment">
+  <button type="submit">Submit</button>
 </form>
