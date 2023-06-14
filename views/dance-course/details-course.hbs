@@ -15,7 +15,10 @@
     <button>Delete</button>
 </form>
 
-<p><strong>Comments:</strong> {{ comments }}</p>
+<p><strong>Comments:</strong></p>
+ {{#each comments }}
+ <p>{{this}}</p>
+ {{/each }}
 <form action="/courses/{{_id}}" method="post" class="form d-inline mt-2">
         <label>Share your experience here
           <input class="form-control mb-2 mt-2" type="text" name="comment" placeholder="Your comment" required>

@@ -10,12 +10,10 @@ const courseSchema = new Schema(
     level: String,
     price: Number,
     description: String,
-    time: {
-      type: Date,
-      required: true,
-    },
-      comments: [String],
-    });
+    time: String,
+    date: Date,
+    comments: [String],
+  });
   
 
 module.exports = model('Course', courseSchema);
