@@ -39,6 +39,9 @@ router.post("/courses/create", isLoggedIn, (req, res, next) => {
     address: req.body.address,
     level: req.body.level,
     price: req.body.price,
+    description: req.body.description,
+    time: req.body.time,
+    comments: []
   };
 
   DanceCourses.create(newCourse)
@@ -75,6 +78,25 @@ router.post("/courses/:courseId/edit", isLoggedIn, (req, res, next) => {
     })
     .catch((error) => {
       next(error);
+    });
+});
+
+//Comments
+router.post("/courses/:courseId/comments", isLoggedIn, (req, res, next) => {
+  const { courseId } = req.params;
+  const { comment } = req.body;
+
+  DanceCourses.findById(courseId)
+    .then((courseFromDB) => {
+      courseFromDB.comments.push(comment);
+      return courseFromDB.save();
+    })
+    .then(() => {
+      res.redirect(`/courses/${courseId}`);
+    })
+    .catch((e) => {
+      console.log("error adding comment to course", e);
+      next(e);
     });
 });
 
