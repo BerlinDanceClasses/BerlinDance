@@ -1,9 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
+// ℹ️ Handles password encryption
+const bcrypt = require("bcrypt");
+const mongoose = require("mongoose");
+
 const DanceCourses = require('../models/Course.model');
+
 const isLoggedIn = require('../middleware/isLoggedIn');
-const isOwner = require('../middleware/isOwner');
 
 // READ: display all courses
 router.get("/courses", (req, res, next) => {
@@ -27,10 +31,6 @@ router.get("/courses/create", isLoggedIn, (req, res, next) => {
 
 // CREATE: process form
 router.post("/courses/create", isLoggedIn, (req, res, next) => {
-  if (!req.session.user) {
-    res.redirect("/login");
-    return;
-  }
   const newCourse = {
     name: req.body.name,
     dancestyle: req.body.dancestyle,
@@ -42,8 +42,7 @@ router.post("/courses/create", isLoggedIn, (req, res, next) => {
     description: req.body.description,
     time: req.body.time,
     date: req.body.date,
-    comments: [],
-    createdBy: req.session.user._id
+    comments: []
   };
 
   DanceCourses.create(newCourse)
@@ -57,7 +56,7 @@ router.post("/courses/create", isLoggedIn, (req, res, next) => {
 });
 
 // UPDATE: display form
-router.get("/courses/:courseId/edit", isLoggedIn, isOwner, async (req, res, next) => {
+router.get("/courses/:courseId/edit", isLoggedIn, async (req, res, next) => {
   const { courseId } = req.params;
 
   try {
@@ -70,11 +69,11 @@ router.get("/courses/:courseId/edit", isLoggedIn, isOwner, async (req, res, next
 });
 
 // UPDATE: process form
-router.post("/courses/:courseId/edit", isLoggedIn, isOwner, (req, res, next) => {
+router.post("/courses/:courseId/edit", isLoggedIn, (req, res, next) => {
   const { courseId } = req.params;
-  const { name, dancestyle, teacher, location, address, level, price } = req.body;
+  const { name, dancestyle, teacher, location, address, level, price, time, date } = req.body;
 
-  DanceCourses.findByIdAndUpdate(courseId, { name, dancestyle, teacher, location, address, level, price }, { new: true })
+  DanceCourses.findByIdAndUpdate(courseId, { name, dancestyle, teacher, location, address, level, price, time, date }, { new: true })
     .then((updatedCourse) => {
       res.redirect(`/courses/${updatedCourse._id}`);
     })
@@ -103,7 +102,7 @@ router.post("/courses/:courseId", isLoggedIn, (req, res, next) => {
 });
 
 // DELETE: delete course
-router.post("/courses/:courseId/delete", isLoggedIn, isOwner, (req, res, next) => {
+router.post("/courses/:courseId/delete", isLoggedIn, (req, res, next) => {
   const { courseId } = req.params;
 
   DanceCourses.findByIdAndDelete(courseId)

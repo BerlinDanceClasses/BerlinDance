@@ -13,6 +13,10 @@ const courseSchema = new Schema(
     time: String,
     date: String,
     comments: [String],
+    createdBy: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }
   });
   
 
