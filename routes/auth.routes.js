@@ -153,4 +153,7 @@ router.get("/logout", isLoggedIn, (req, res) => {
   });
 });
 
+// router.post('/login', (req, res, next) => {
+  // console.log('SESSION =====> ', req.session);
+
 module.exports = router;

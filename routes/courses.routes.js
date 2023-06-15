@@ -83,7 +83,7 @@ router.post("/courses/:courseId/edit", isLoggedIn, isOwner, (req, res, next) => 
 });
 
 //Comments
-router.post("/courses/:courseId/comments", isLoggedIn, (req, res, next) => {
+router.post("/courses/:courseId", isLoggedIn, (req, res, next) => {
   const { courseId } = req.params;
   const { comment } = req.body;
 

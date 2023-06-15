@@ -8,8 +8,7 @@
 <p><strong>Price:</strong> {{ price }}</p>
 <p><strong>Description:</strong> {{ description }}</p>
 <p><strong>Time:</strong> {{ time }}</p>
-<p><strong>Comments:</strong> {{ comments }}</p>
-<p><strong>Created by:</strong> {{course.createdBy.username}}</p>
+<p><strong>Date:</strong> {{ date }}</p>
 
 <a href="/courses">Back</a>
 <a href="/courses/{{this._id}}/edit">Edit</a>
@@ -17,8 +16,15 @@
     <button>Delete</button>
 </form>
 
-<form action="/courses/{{ _id }}/comments" method="POST">
-  <label for="comment">Add a comment:</label>
-  <input type="text" id="comment" name="comment">
-  <button type="submit">Submit</button>
-</form>
+<p><strong>Comments:</strong></p>
+ {{#each comments }}
+ <p>{{this}}</p>
+ {{/each }}
+<form action="/courses/{{_id}}" method="post" class="form d-inline mt-2">
+        <label>Share your experience here
+          <input class="form-control mb-2 mt-2" type="text" name="comment" placeholder="Your comment" required>
+          <button type="submit" class="btn btn-dark login-btn mt-4 ">Post it</button>
+        </label>
+      </form>
+
+>>>>>>> 881cabdd62dfaf6d2434159c67e612c1512fc3ee
