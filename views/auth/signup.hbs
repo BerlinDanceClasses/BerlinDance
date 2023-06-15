@@ -3,20 +3,19 @@
   <h2>Sign Up Here</h2>
   <form action="/auth/signup" method="POST">
 
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" required/>
+    <label class="form-label"> Username
+      <input type="text" name="username" class="form-control" placeholder="Your username" required/>
     </label>
 
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" required/>
+    <label class="form-label"> Email
+      <input type="email" name="email" class="form-control" placeholder="Your email" required/>
     </label>
 
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" required/>
+    <label class="form-label"> Password
+      <input type="password" name="password" class="form-control" placeholder="Your password" required/>
     </label>
 
-    <button type="submit">Sign Up</button>
-
+    <button type="submit" class="btn btn-primary">Sign Up</button>
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>

@@ -1,29 +1,32 @@
 <h1>{{ name }}</h1>
-
-<p><strong>Dance Style:</strong> {{ dancestyle }}</p>
-<p><strong>Teacher:</strong> {{ teacher }}</p>
-<p><strong>Location:</strong> {{ location }}</p>
-<p><strong>Address:</strong> {{ address }}</p>
-<p><strong>Level:</strong> {{ level }}</p>
-<p><strong>Price:</strong> {{ price }}</p>
-<p><strong>Description:</strong> {{ description }}</p>
-<p><strong>Time:</strong> {{ time }}</p>
-<p><strong>Date:</strong> {{ date }}</p>
-
-<a href="/courses">Back</a>
-<a href="/courses/{{this._id}}/edit">Edit</a>
-<form method="POST" action="/courses/{{_id}}/delete">
-    <button>Delete</button>
-</form>
+<div class="card">
+    <p><strong>Dance Style:</strong> {{ dancestyle }}</p>
+    <p><strong>Teacher:</strong> {{ teacher }}</p>
+    <p><strong>Location:</strong> {{ location }}</p>
+    <p><strong>Address:</strong> {{ address }}</p>
+    <p><strong>Level:</strong> {{ level }}</p>
+    <p><strong>Price:</strong> {{ price }}</p>
+    <p><strong>Description:</strong> {{ description }}</p>
+    <p><strong>Time:</strong> {{ time }}</p>
+    <p><strong>Date:</strong> {{ date }}</p>
+</div>
+<div class="btn-group">
+    <div class="column">
+        <a class="btn btn-warning" href="/courses">Back</a>
+        <a class="btn btn-success" href="/courses/{{this._id}}/edit">Edit</a>
+    </div>
+    <form method="POST" action="/courses/{{_id}}/delete">
+        <button class="btn btn-outline-danger">Delete</button>
+    </form>
+</div>
 
 <p><strong>Comments:</strong></p>
- {{#each comments }}
- <p>{{this}}</p>
- {{/each }}
+{{#each comments }}
+<p>{{this}}</p>
+{{/each }}
 <form action="/courses/{{_id}}" method="post" class="form d-inline mt-2">
-        <label>Share your experience here
-          <input class="form-control mb-2 mt-2" type="text" name="comment" placeholder="Your comment" required>
-          <button type="submit" class="btn btn-dark login-btn mt-4 ">Post it</button>
-        </label>
-      </form>
-
+    <label>Share your experience here
+        <input class="form-control mb-2 mt-2" type="text" name="comment" placeholder="Your comment" required>
+        <button type="submit" class="btn btn-dark login-btn mt-4 ">Post it</button>
+    </label>
+</form>

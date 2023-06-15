@@ -41,6 +41,7 @@ router.post("/courses/create", isLoggedIn, (req, res, next) => {
     price: req.body.price,
     description: req.body.description,
     time: req.body.time,
+    date: req.body.date,
     comments: [],
     createdBy: req.session.user._id
   };
