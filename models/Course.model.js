@@ -11,7 +11,7 @@ const courseSchema = new Schema(
     price: Number,
     description: String,
     time: String,
-    date: Date,
+    date: String,
     comments: [String],
   });
   
