@@ -1,25 +1,13 @@
+<h1>Berlin Dance Courses</h1>
 
-<div class="p-3">
-    <h1>Berlin Dance Courses</h1>
-    <a class="btn btn-primary" href="/courses/create">Add a new course</a>
-     <div class="p-3"></div>
-</div>
+<a href="/courses/create">Add a new course</a>
 
-<div class="container">
-        <div class="row align-items-center">
-            <div class="col-6 col-md-4">
-             {{#each courses}}
-            <div class="card">
-                <img src="../images/background.jpeg" alt="dance" class="img-fluid" class="card-img-top">
-                <div class="card-body">
-                    <h3><a class="btn btn-primary" href="/courses/{{ this.id }}">{{ this.name }}</a></h3>
-                    <h6 class="card-title">Dancestyle: {{ this.dancestyle }}</h6>
-                    <h6 class="card-text">Teacher: {{ this.teacher }}</h6>
-                </div>
-            </div>
-               {{/each}}
-        </div>
-        </div>
-    </div>
-</div>
-
+<ul>
+  {{#each courses}}
+    <li>
+      <a href="/courses/{{ this.id }}">{{ this.name }}</a> - {{ this.dancestyle }} - {{ this.teacher }}
+      <form method="POST" action="/courses/{{ this.id }}/delete">
+      
+      </form>
+    </li>
+  {{/each}}

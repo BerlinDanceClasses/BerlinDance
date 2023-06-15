@@ -1,50 +1,46 @@
-<div class="p-3"></div>
-<h1>Create a Dance Course</h1>
-<div class="p-3"></div>
+<h1>Register a Dance Course</h1>
 
 <form method="POST" action="/courses/create">
+  <label> Name:
+    <input type="text" name="name" required/>
+  </label>
 
-  <label for="name" class="form-label">Name:</label>
-  <input type="text" name="name" class="form-control w-50" value="{{ course.name }}" placeholder="..." required />
+  <label> Dance Style:
+    <input type="text" name="dancestyle"required />
+  </label>
 
-  <label for="dancestyle" class="form-label">Dance Style:</label>
-  <input type="text" name="dancestyle" class="form-control w-50" value="{{ course.dancestyle }}" placeholder="..."
-    required />
+  <label> Teacher:
+    <input type="text" name="teacher" required/>
+  </label>
 
-  <label for="teacher" class="form-label">Teacher:</label>
-  <input type="text" name="teacher" class="form-control w-50" value="{{ course.teacher }}" placeholder="..." required />
+  <label> Location:
+    <input type="text" name="location"required />
+  </label>
 
-  <label for="location" class="form-label">Location: </label>
-  <input type="text" name="location" class="form-control w-50" value="{{ course.location }}" placeholder="..."
-    required />
+  <label> Address:
+    <input type="text" name="address" required/>
+  </label>
 
-  <label for="address" class="form-label">Address:</label>
-  <input type="text" name="address" class="form-control w-50" value="{{ course.address }}" placeholder="..." required />
+  <label> Level:
+    <input type="text" name="level" required/>
+  </label>
 
-  <label for="level" class="form-label">Level:</label>
-  <select class="form-select w-50" value="{{ course.level }}" placeholder="..." required>
-    <option>Beginners</option>
-    <option>Intermediates</option>
-    <option>Professionals</option>
-  </select>
+  <label> Price:
+    <input type="number" name="price" required/>
+  </label>
 
-  <label for="price" class="form-label">Price:</label>
-  <input type="number" name="price" class="form-control w-50" value="{{ course.price }}" placeholder="..." required />
+   <label> Description:
+    <input type="text" name="description" />
+  </label>
 
-  <label for="description" class="form-label">Description:</label>
-  <input type="text" name="description" class="form-control w-50" value="{{ course.description }}" placeholder="..."
-    required />
+    <label> Time:
+    <input type="time" name="time" />
+  </label>
 
-  <label for="comment" class="form-label">Comment: </label>
-  <input type="text" name="comment" class="form-control w-50" value="{{ course.comment }}" placeholder="..." required />
+    <label> Date:
+    <input type="date" name="date" />
+  </label>
 
-  <label for="time" class="form-label">Time:</label>
-  <input type="time" name="time" class="form-control w-50" value="{{ course.time }}" placeholder="..." required />
-
-  <label for="date" class="form-label">Date:</label>
-  <input type="date" name="date" class="form-control w-50" value="{{ course.date }}" placeholder="..." required />
-
-  <div class="p-3"></div>
-  <button class="btn btn-primary" type="submit">Create Course</button>
-  <a class="btn btn-warning" href="/courses">Back</a>
+  <button type="submit">Create Course</button>
+  <a href="/courses">Back</a>
 </form>

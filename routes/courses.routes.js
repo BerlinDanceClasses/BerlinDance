@@ -9,8 +9,6 @@ const DanceCourses = require('../models/Course.model');
 
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-const isOwner = require('../middleware/isOwner');
-
 // READ: display all courses
 router.get("/courses", (req, res, next) => {
   DanceCourses.find()
@@ -44,9 +42,8 @@ router.post("/courses/create", isLoggedIn, (req, res, next) => {
     description: req.body.description,
     time: req.body.time,
     date: req.body.date,
-    comments: [],
-    createdBy: req.session.user._id
-    };
+    comments: []
+  };
 
   DanceCourses.create(newCourse)
     .then((newCourse) => {
@@ -105,7 +102,7 @@ router.post("/courses/:courseId", isLoggedIn, (req, res, next) => {
 });
 
 // DELETE: delete course
-router.post("/courses/:courseId/delete", isOwner, (req, res, next) => {
+router.post("/courses/:courseId/delete", isLoggedIn, (req, res, next) => {
   const { courseId } = req.params;
 
   DanceCourses.findByIdAndDelete(courseId)

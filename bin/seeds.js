@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const DanceCourse = require('../models/Course.model');
 
-const MONGO_URI = "process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/BerlinDance';"
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/BerlinDance';
 
 
 const BerlinDanceCourses = [
@@ -16,8 +16,7 @@ const BerlinDanceCourses = [
         description:"A ballroom dance of Latin American origin in ²/₄ time with a basic pattern of step-step-step-step-close and characterised by long pauses and stylised body positions",
         time: "12:00",
         date: "12/06/2023",
-        comments: [],
-        deletable: false,
+        comments: []
     },
     {
         name: "Tango",
@@ -31,7 +30,6 @@ const BerlinDanceCourses = [
         time: "19:00",
         date: "12/07/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Bachata",
@@ -45,7 +43,6 @@ const BerlinDanceCourses = [
         time: "20:00",
         date: "12/10/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Swing",
@@ -53,13 +50,12 @@ const BerlinDanceCourses = [
         teacher: "Frieda Dietrich",
         location: "Ballhaus Berlin",
         address: "Chausseestraße 102, 10115 Berlin",
-        level: "Professionals",
+        level: "Professional",
         price: 100,
         description:"Swing dancing is a popular social dance that is often characterized by lifts, spins and flips. It's generally upbeat, lively and a lot of fun to watch—and to dance! Like most dance styles, there are variations of the dance. It includes some basic steps and then dancers have creative freedom to make it their own.",
         time: "18:00",
         date: "10/02/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Merengue",
@@ -73,7 +69,6 @@ const BerlinDanceCourses = [
         time: "19:00",
         date: "12/06/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Heels Dance",
@@ -81,13 +76,12 @@ const BerlinDanceCourses = [
         teacher: "Caroline de Monacco",
         location: "Dolce Vita Dance Studio",
         address: "Körtestraße 10, 10967 Berlin",
-        level: "Intermediates",
+        level: "Intermediate",
         price: 100,
         description:"Heels Dance is a high-energy, female-centered form of dance where the performers wear heels while they dance. This dance style developed from elements such as jazz, lyrical, and hip-hop, all of which involve powerful yet graceful moves executed with poise.",
         time: "20:00",
         date: "12/18/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Waltz",
@@ -101,7 +95,6 @@ const BerlinDanceCourses = [
         time: "17:00",
         date: "12/10/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "ChaChaCha",
@@ -109,13 +102,12 @@ const BerlinDanceCourses = [
         teacher: "Airton de Brasil ",
         location: "Beachbar Mitte",
         address: "Monbijouplatz 1, 10117 Berlin",
-        level: "Intermediates",
+        level: "Intermediate",
         price: 100,
         description:"The cha-cha is one of the five main Latin ballroom dances most frequently taught in dance schools around the world. The steps are compact and based partly on the rumba and mambo, with plenty of hip and pelvic movements. The basic forward movement is supplemented with various turns, dips, and slides.",
         time: "12:00",
         date: "09/06/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Salsa",
@@ -129,7 +121,6 @@ const BerlinDanceCourses = [
         time: "18:30",
         date: "08/08/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "HipHop",
@@ -143,7 +134,6 @@ const BerlinDanceCourses = [
         time: "12:00",
         date: "10/08/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Voguing",
@@ -151,13 +141,12 @@ const BerlinDanceCourses = [
         teacher: "Madonna",
         location: "Chantals house of Shame",
         address: "Revalerstr.99, 10245 Berlin",
-        level: "Beginners",
+        level: "Open",
         price: 100,
         description: "Vogue, or voguing, is a highly stylized, modern house dance originating in the late 1980s that evolved out of the Harlem ballroom scene of the 1960s. A famous example can be found in Madonnas Vogue music video.",
         time: "22:00",
         date: "12/20/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Ballet",
@@ -171,7 +160,6 @@ const BerlinDanceCourses = [
         time: "10:00",
         date: "12/06/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Line Dance",
@@ -185,7 +173,6 @@ const BerlinDanceCourses = [
         time: "22:00",
         date: "08/06/2023",
         comments: [],
-        deletable: false,
     },
     {
         name: "Tap Dance",
@@ -199,7 +186,6 @@ const BerlinDanceCourses = [
         time: "12:00",
         date: "12/06/2023",
         comments: [],
-        deletable: false,
     }
 ];
 
