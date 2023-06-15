@@ -15,6 +15,11 @@ const courseSchema = new Schema(
       required: true,
     },
       comments: [String],
+
+      createdBy: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      }
     });
   
 
