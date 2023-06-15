@@ -16,7 +16,8 @@ const BerlinDanceCourses = [
         description:"A ballroom dance of Latin American origin in ²/₄ time with a basic pattern of step-step-step-step-close and characterised by long pauses and stylised body positions",
         time: "12:00",
         date: "12/06/2023",
-        comments: []
+        comments: [],
+        deletable: false,
     },
     {
         name: "Tango",
@@ -30,6 +31,7 @@ const BerlinDanceCourses = [
         time: "19:00",
         date: "12/07/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Bachata",
@@ -43,6 +45,7 @@ const BerlinDanceCourses = [
         time: "20:00",
         date: "12/10/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Swing",
@@ -56,6 +59,7 @@ const BerlinDanceCourses = [
         time: "18:00",
         date: "10/02/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Merengue",
@@ -69,6 +73,7 @@ const BerlinDanceCourses = [
         time: "19:00",
         date: "12/06/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Heels Dance",
@@ -82,6 +87,7 @@ const BerlinDanceCourses = [
         time: "20:00",
         date: "12/18/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Waltz",
@@ -95,6 +101,7 @@ const BerlinDanceCourses = [
         time: "17:00",
         date: "12/10/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "ChaChaCha",
@@ -108,6 +115,7 @@ const BerlinDanceCourses = [
         time: "12:00",
         date: "09/06/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Salsa",
@@ -121,6 +129,7 @@ const BerlinDanceCourses = [
         time: "18:30",
         date: "08/08/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "HipHop",
@@ -134,6 +143,7 @@ const BerlinDanceCourses = [
         time: "12:00",
         date: "10/08/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Voguing",
@@ -147,6 +157,7 @@ const BerlinDanceCourses = [
         time: "22:00",
         date: "12/20/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Ballet",
@@ -160,6 +171,7 @@ const BerlinDanceCourses = [
         time: "10:00",
         date: "12/06/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Line Dance",
@@ -173,6 +185,7 @@ const BerlinDanceCourses = [
         time: "22:00",
         date: "08/06/2023",
         comments: [],
+        deletable: false,
     },
     {
         name: "Tap Dance",
@@ -186,6 +199,7 @@ const BerlinDanceCourses = [
         time: "12:00",
         date: "12/06/2023",
         comments: [],
+        deletable: false,
     }
 ];
 
