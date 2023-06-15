@@ -16,7 +16,8 @@ const BerlinDanceCourses = [
         description:"A ballroom dance of Latin American origin in ²/₄ time with a basic pattern of step-step-step-step-close and characterised by long pauses and stylised body positions",
         time: "12:00",
         date: "12/06/2023",
-        comments: []
+        comments: [],
+        deletable: false
     },
     {
         name: "Tango",
