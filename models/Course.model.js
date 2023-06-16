@@ -1,16 +1,23 @@
-const isOwner = async (req, res, next) => {
-  const courseId = req.params.courseId;
+const { mongoose, Schema, model } = require('mongoose');
 
-  try {
-    const course = await Course.findById(courseId);
-    if (course.createdBy.toString() === req.session.user._id.toString()) {
-      next();
-    } else {
-      res.redirect('/not-authorized');
+const courseSchema = new Schema(
+  {
+    name: String,
+    dancestyle: String,
+    teacher: String,
+    location: String,
+    address: String,
+    level: String,
+    price: Number,
+    description: String,
+    time: String,
+    date: String,
+    comments: [String],
+    createdBy: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
     }
-  } catch (error) {
-    next();
-  }
-};
+  });
+  
 
-module.exports = isOwner;
+module.exports = model('Course', courseSchema);
